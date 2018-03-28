@@ -14,7 +14,7 @@ _Este documento está em construção e sujeito a alterações_
 
 ## Descrição do problema
 
-Descrever problema
+Os alunos devem implementar o jogo [Simplexity] para dois jogadores.
 
 ## Modo de funcionamento
 
@@ -22,40 +22,68 @@ Explicar como programa deve funcionar
 
 ## Visualização do jogo
 
-Explicar visualização do jogo
+A visualização do jogo deve feita em modo de texto. A [Figura 1](#fig1) mostra
+uma possível implementação da visualização do jogo (lado direito), com os
+caracteres `R` e `r` indicando peças vermelhas cúbicas e cilíndricas,
+respetivamente, e os caracteres `W` e `w` representando peças branchas cúbicas
+e cilíndricas, respetivamente.
 
-## Objetivos, critério de avaliação e entrega
+<a name="fig1"></a>
+
+![visualize](https://user-images.githubusercontent.com/3018963/38045647-463cb488-32b5-11e8-9c98-70c6cc42a16f.png)
+
+**Figura 1** - Possível implementação da visualização em modo de texto (lado
+esquerdo) e situação de jogo equivalente (lado direito).
+
+## Organização do projeto e estrutura de classes
+
+O projeto deve estar devidamente organizado, fazendo uso de classes e
+enumerações. Cada classe/enumeração deve ser colocada num ficheiro com o mesmo
+nome. Por exemplo, a classe `Player` deve ser colocada no ficheiro `Player.cs`.
+A estrutura de classes deve ser bem pensada e organizada de uma forma lógica,
+e [cada classe deve ter uma responsabilidade específica e bem definida][SRP].
+
+O exercício proposto no capítulo 20 do livro da disciplina [\[1\]](#ref1)
+constitui um bom ponto de partida para desenhar uma estrutura de classes
+adequada para este projeto.
 
 <a name="objetivos"></a>
 
-### Objetivos
+## Objetivos e critério de avaliação
 
-* Jogo deve funcionar como especificado.
-* Código deve estar devidamente comentado e indentado.
-* Documentação do projeto deve ser feita comentários de documentação XML, e a
-  documentação (gerada com [Doxygen], [Sandcastle] ou ferramenta similar) deve
-  estar incluída no ZIP do projeto.
-* Programa deve estar organizado numa estrutura de classes bem pensada, onde
-  [cada classe tem uma responsabilidade específica e bem definida][SRP].
+Este projeto tem os seguintes objetivos:
 
-### Critério de avaliação
+* **O1** Jogo deve funcionar como especificado.
+* **O2** Programa deve estar organizado numa estrutura de classes bem pensada. O
+   código deve estar devidamente comentado e indentado<sup>[1](#fn1)</sup>.
+* **O3** Projeto deve estar adequadamente comentado e documentado. Documentação do
+   projeto deve ser feita comentários de documentação XML, e a documentação
+   (gerada com [Doxygen], [Sandcastle] ou ferramenta similar) deve estar
+   incluída no ZIP do projeto (mas não integrada no repositório Git).
+* **O4** Repositório Git deve refletir um bom uso desta ferramenta, com _commits_ por
+   parte de todos os elementos do grupo, com mensagens de _commit_ que sigam as
+   melhores práticas para o efeito (como indicado
+   [aqui](https://chris.beams.io/posts/git-commit/),
+   [aqui](https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53),
+   [aqui](https://github.com/erlang/otp/wiki/writing-good-commit-messages)
+   e [aqui](https://stackoverflow.com/questions/2290016/git-commit-messages-50-72-formatting)).
+* **O5** Documentação do projeto deve ser feita comentários de documentação XML, e a
+   documentação (gerada com [Doxygen], [Sandcastle] ou ferramenta similar) deve
+   estar incluída no ZIP do projeto.
+* **O6** Relatório bem estruturado.
 
 O projeto, que tem um peso de 4 valores na nota final da disciplina, será
-avaliado segundo os critérios indicados na [Tabela 1](#tabela1).
+avaliado de uma forma qualitativa. Isto significa que todos os objetivos têm de
+ser totalmente (ou pelo menos parcialmente) cumpridos. A cada objetivo, O1 a
+O6, será atribuída uma nota entre 0 e 1. A nota final do projeto será dada pela
+seguinte fórmula:
 
-<a name="tabela1"></a>
+_N = 4 x O1 x O2 x O3 x O4 x O5 x O6_
 
-**Tabela 1** - Critérios de avaliação.
+Isto significa que se os alunos ignorarem completamente um dos objetivos, a
+nota final será zero.
 
-| Critério                                                  | Peso      |
-|-----------------------------------------------------------|-----------|
-| Funcionamento segundo especificações                      | ?,? val.  |
-| Qualidade do código e org. do projeto<sup>[1](#fn1)</sup> | ?,? val.  |
-| Comentários e documentação XML                            | ?,? val.  |
-| Relatório                                                 | ?,? val.  |
-| Uso adequado de Git                                       | ?,? val.  |
-
-### Entrega
+## Entrega
 
 O projeto deve ser entregue via Moodle até às 23h de 22 de abril de 2018.
 Deve ser submetido um ficheiro `zip` com os seguintes conteúdos:
@@ -94,7 +122,6 @@ UTF-8<sup>[2](#fn2)</sup>.
 <a name="extensoesop"></a>
 
 * Inteligência artificial
-* [Unity]
 
 ## Honestidade académica
 
@@ -120,7 +147,7 @@ consequência imediata a anulação dos projetos de todos os alunos envolvidos
 (incluindo os que possibilitaram a ocorrência). Qualquer suspeita de
 desonestidade académica será relatada aos órgãos superiores da escola
 para possível instauração de um processo disciplinar. Este poderá
-resultar em reprovação à disciplina, reprovação de ano ou mesmo
+resultar em reprovação à disciplina, reprovaç.dropbox.attrão de ano ou mesmo
 suspensão temporária ou definitiva da ULHT<sup>[3](#fn3)</sup>.
 
 ## Notas
@@ -139,7 +166,7 @@ Windows pois regra geral a codificação UTF-8 não é usada por omissão. Em to
 caso, e dependendo do editor usado, a codificação UTF-8 pode ser selecionada na
 janela de "Save as"/"Guardar como", ou então nas preferências do editor.
 
-<sup><a name="fn3">3</a></sup> Texto adaptado da disciplina de [Algoritmos e
+<sup><a name="fn3">3</a></sup> Texto adapta.dropbox.attrdo da disciplina de [Algoritmos e
 Estruturas de Dados][aed] do [Instituto Superior Técnico][ist].
 
 ## Referências
@@ -172,4 +199,6 @@ Este enunciado é disponibilizados através da licença [CC BY-NC-SA 4.0].
 [Doxygen]:https://www.stack.nl/~dimitri/doxygen/
 [Sandcastle]:https://github.com/EWSoftware/SHFB
 [SRP]:https://en.wikipedia.org/wiki/Single_responsibility_principle
-[Unity]:https://unity3d.com
+[regras do Simplexity]:https://john.cs.olemiss.edu/~dwilkins/CSCI531/fall12/Simplexity_rules.pdf
+[Simplexity]:https://boardgamegeek.com/boardgame/55810/simplexity
+[KISS]:https://en.wikipedia.org/wiki/KISS_principle
