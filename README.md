@@ -40,21 +40,20 @@ Explicar visualização do jogo
 
 ### Critério de avaliação
 
-O projeto, que tem um peso de 10 valores na nota final da disciplina, será
+O projeto, que tem um peso de 4 valores na nota final da disciplina, será
 avaliado segundo os critérios indicados na [Tabela 1](#tabela1).
 
 <a name="tabela1"></a>
 
 **Tabela 1** - Critérios de avaliação.
 
-| Critério                                               | Peso      |
-|--------------------------------------------------------|-----------|
-| Funcionamento segundo especificações                   | ?,? val.  |
-| Qualidade do código e das soluções<sup>[6](#fn6)</sup> | ?,? val.  |
-| Comentários e documentação XML                         | ?,? val.  |
-| Relatório                                              | ?,? val.  |
-| Uso adequado de Git                                    | ?,? val.  |
-| Organização do projecto e estrutura de classes         | ?,? val.  |
+| Critério                                                  | Peso      |
+|-----------------------------------------------------------|-----------|
+| Funcionamento segundo especificações                      | ?,? val.  |
+| Qualidade do código e org. do projeto<sup>[1](#fn1)</sup> | ?,? val.  |
+| Comentários e documentação XML                            | ?,? val.  |
+| Relatório                                                 | ?,? val.  |
+| Uso adequado de Git                                       | ?,? val.  |
 
 ### Entrega
 
@@ -88,7 +87,7 @@ Deve ser submetido um ficheiro `zip` com os seguintes conteúdos:
       suficiente para que seja possível ter uma boa ideia do que foi feito.
 
 **Atenção**: Todos os ficheiros do projeto devem ser gravados em codificação
-UTF-8<sup>[5](#fn5)</sup>.
+UTF-8<sup>[2](#fn2)</sup>.
 
 ## Extensões opcionais
 
@@ -122,11 +121,26 @@ consequência imediata a anulação dos projetos de todos os alunos envolvidos
 desonestidade académica será relatada aos órgãos superiores da escola
 para possível instauração de um processo disciplinar. Este poderá
 resultar em reprovação à disciplina, reprovação de ano ou mesmo
-suspensão temporária ou definitiva da ULHT<sup>[12](#fn12)</sup>.
+suspensão temporária ou definitiva da ULHT<sup>[3](#fn3)</sup>.
 
 ## Notas
 
-<sup><a name="fn1">1</a></sup> Temporário
+<sup><a name="fn1">1</a></sup> Este item inclui vários aspetos: 1) projeto
+devidamente organizado, com uma estrutura de classes lógica na qual [cada
+classe tem uma responsabilidade específica e bem definida][SRP]; 2) código bem
+indentado; 3) não é incluído código "morto", que não faz nada, como por exemplo
+variáveis ou métodos nunca usados; 4) as soluções desenvolvidas são
+[simples][KISS] e/ou eficientes; 5) código compila e executa sem erros e/ou
+_warnings_; 6) código não acede a zonas inválidas da memória, como por exemplo
+índices fora dos limites de um _array_.
+
+<sup><a name="fn2">2</a></sup> Este pormenor é especialmente importante em
+Windows pois regra geral a codificação UTF-8 não é usada por omissão. Em todo o
+caso, e dependendo do editor usado, a codificação UTF-8 pode ser selecionada na
+janela de "Save as"/"Guardar como", ou então nas preferências do editor.
+
+<sup><a name="fn3">3</a></sup> Texto adaptado da disciplina de [Algoritmos e
+Estruturas de Dados][aed] do [Instituto Superior Técnico][ist].
 
 ## Referências
 
