@@ -10,21 +10,22 @@ work. If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/>.
 
 # 1º Projeto de Linguagens de Programação I 2017/2018
 
-_Este documento está em construção e sujeito a alterações_
-
 ## Descrição do problema
 
-Os alunos devem implementar o jogo [Simplexity] para dois jogadores. Este jogo
-é semelhante ao [4-em-linha], mas com uma variação: além de **cor**, as peças
-têm também **forma**. O [Simplexity] é jogado em turnos, e em cada turno o
-jogador coloca uma peça numa das 7 colunas do tabuleiro de jogo. A peça cai na
-vertical até atingir a base da coluna ou uma peça já colocada na coluna. Um
-jogador vence quando 4 peças da sua **cor** ou da sua **forma** são colocadas
-em linha (na vertical, horizontal ou diagonal). Se ocorrer uma situação em que
-existam 4 peças em linha da mesma cor e 4 peças em linha da mesma forma, a
-forma sobrepõem-se à cor para efeitos de vitória. O jogo termina num empate
-após todas as peças terem sido colocadas em jogo sem que exista uma situação
-de vitória.
+Os alunos devem implementar o jogo [Simplexity] para dois jogadores em C#.
+
+### O jogo Simplexity
+
+O jogo [Simplexity] é semelhante ao [4-em-linha], mas com uma variação: além de
+**cor**, as peças têm também **forma**. O [Simplexity] é jogado em turnos, e em
+cada turno o jogador coloca uma peça numa das 7 colunas do tabuleiro de jogo. A
+peça cai na vertical até atingir a base da coluna ou uma peça já colocada na
+coluna. Um jogador vence quando 4 peças da sua **cor** ou da sua **forma** são
+colocadas em linha (na vertical, horizontal ou diagonal). Se ocorrer uma
+situação em que existam 4 peças em linha da mesma cor e 4 peças em linha da
+mesma forma, a forma sobrepõem-se à cor para efeitos de vitória. O jogo termina
+num empate após todas as peças terem sido colocadas em jogo sem que exista uma
+situação de vitória.
 
 A [Tabela 1](#tab1) mostra as condições de vitória para cada jogador, bem como
 as peças alocadas inicialmente a cada um. Em caso de dúvida pode consultas as
@@ -40,11 +41,33 @@ a cada jogador.
 | 1       | Branco         | Cilindro         | 11 cubos brancos, 10 cilindros brancos     |
 | 2       | Vermelho       | Cubo             | 11 cubos vermelhos, 10 cilindros vermelhos |
 
-## Modo de funcionamento
+### Modo de funcionamento
 
-Explicar como programa deve funcionar
+O jogo começa automaticamente, entrando no seguinte ciclo (_game loop_):
 
-## Visualização do jogo
+1. Mostrar tabuleiro (ver secção <a href="#visualize">Visualização do jogo</a>)
+2. Solicitar jogada ao jogador atual (jogador 1 é o primeiro a jogar)
+3. Verificar se existe uma condição de vitória
+   * Em caso afirmativo, terminar o jogo e indicar o vencedor
+   * Em caso negativo:
+      * Se ainda existirem peças para jogar, voltar ao ponto 1, alternando o
+        jogador
+      * Caso contrário, terminar jogo em empate.
+
+No ponto 2, é solicitado ao jogador: a) a peça a jogar (cubo ou cilindro); e,
+b) a coluna onde colocar a peça. Antes de solicitar a jogada, deve ser dada a
+indicação de quantas peças de cada tipo o jogador ainda tem para jogar. Após o
+jogador ter inserido uma jogada, o jogo deve verificar se: a) o jogador ainda
+tem peças do tipo indicado; e, b) a coluna do tabuleiro ainda tem espaço para
+mais peças (máximo 7 peças por coluna). Se alguma destas verificações falhar, o
+jogador deve repetir a jogada.
+
+No ponto 3, o tabuleiro deve ser analisado de modo a determinar se existe uma
+das condições de vitória descritas na secção anterior.
+
+<a name="visualize"></a>
+
+### Visualização do jogo
 
 A visualização do jogo deve feita em modo de texto. A [Figura 1](#fig1) mostra
 uma possível implementação da visualização do jogo (lado direito), com os
@@ -59,13 +82,14 @@ e cilíndricas, respetivamente.
 **Figura 1** - Possível implementação da visualização em modo de texto (lado
 esquerdo) e situação de jogo equivalente (lado direito).
 
-## Organização do projeto e estrutura de classes
+### Organização do projeto e estrutura de classes
 
 O projeto deve estar devidamente organizado, fazendo uso de classes e
 enumerações. Cada classe/enumeração deve ser colocada num ficheiro com o mesmo
-nome. Por exemplo, a classe `Player` deve ser colocada no ficheiro `Player.cs`.
-A estrutura de classes deve ser bem pensada e organizada de uma forma lógica,
-e [cada classe deve ter uma responsabilidade específica e bem definida][SRP].
+nome. Por exemplo, uma classe chamada classe `Player` deve ser colocada no
+ficheiro `Player.cs`. A estrutura de classes deve ser bem pensada e organizada
+de uma forma lógica, e [cada classe deve ter uma responsabilidade específica e
+bem definida][SRP].
 
 O exercício proposto no capítulo 20 do livro da disciplina [\[1\]](#ref1)
 constitui um bom ponto de partida para desenhar uma estrutura de classes
