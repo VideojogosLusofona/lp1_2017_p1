@@ -14,7 +14,31 @@ _Este documento está em construção e sujeito a alterações_
 
 ## Descrição do problema
 
-Os alunos devem implementar o jogo [Simplexity] para dois jogadores.
+Os alunos devem implementar o jogo [Simplexity] para dois jogadores. Este jogo
+é semelhante ao [4-em-linha], mas com uma variação: além de **cor**, as peças
+têm também **forma**. O [Simplexity] é jogado em turnos, e em cada turno o
+jogador coloca uma peça numa das 7 colunas do tabuleiro de jogo. A peça cai na
+vertical até atingir a base da coluna ou uma peça já colocada na coluna. Um
+jogador vence quando 4 peças da sua **cor** ou da sua **forma** são colocadas
+em linha (na vertical, horizontal ou diagonal). Se ocorrer uma situação em que
+existam 4 peças em linha da mesma cor e 4 peças em linha da mesma forma, a
+forma sobrepõem-se à cor para efeitos de vitória. O jogo termina num empate
+após todas as peças terem sido colocadas em jogo sem que exista uma situação
+de vitória.
+
+A [Tabela 1](#tab1) mostra as condições de vitória para cada jogador, bem como
+as peças alocadas inicialmente a cada um. Em caso de dúvida pode consultas as
+[regras do Simplexity] ou contactar o docente.
+
+<a name="tab1"></a>
+
+**Tabela 1** - Condições de vitória (cor e forma) e peças alocadas inicialmente
+a cada jogador.
+
+| Jogador | Vitória de cor | Vitória de forma | Peças iniciais                             |
+|---------|----------------|------------------|--------------------------------------------|
+| 1       | Branco         | Cilindro         | 11 cubos brancos, 10 cilindros brancos     |
+| 2       | Vermelho       | Cubo             | 11 cubos vermelhos, 10 cilindros vermelhos |
 
 ## Modo de funcionamento
 
@@ -25,7 +49,7 @@ Explicar como programa deve funcionar
 A visualização do jogo deve feita em modo de texto. A [Figura 1](#fig1) mostra
 uma possível implementação da visualização do jogo (lado direito), com os
 caracteres `R` e `r` indicando peças vermelhas cúbicas e cilíndricas,
-respetivamente, e os caracteres `W` e `w` representando peças branchas cúbicas
+respetivamente, e os caracteres `W` e `w` representando peças brancas cúbicas
 e cilíndricas, respetivamente.
 
 <a name="fig1"></a>
@@ -54,22 +78,22 @@ adequada para este projeto.
 Este projeto tem os seguintes objetivos:
 
 * **O1** Jogo deve funcionar como especificado.
-* **O2** Programa deve estar organizado numa estrutura de classes bem pensada. O
-   código deve estar devidamente comentado e indentado<sup>[1](#fn1)</sup>.
-* **O3** Projeto deve estar adequadamente comentado e documentado. Documentação do
-   projeto deve ser feita comentários de documentação XML, e a documentação
-   (gerada com [Doxygen], [Sandcastle] ou ferramenta similar) deve estar
-   incluída no ZIP do projeto (mas não integrada no repositório Git).
-* **O4** Repositório Git deve refletir um bom uso desta ferramenta, com _commits_ por
-   parte de todos os elementos do grupo, com mensagens de _commit_ que sigam as
-   melhores práticas para o efeito (como indicado
-   [aqui](https://chris.beams.io/posts/git-commit/),
-   [aqui](https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53),
-   [aqui](https://github.com/erlang/otp/wiki/writing-good-commit-messages)
-   e [aqui](https://stackoverflow.com/questions/2290016/git-commit-messages-50-72-formatting)).
-* **O5** Documentação do projeto deve ser feita comentários de documentação XML, e a
-   documentação (gerada com [Doxygen], [Sandcastle] ou ferramenta similar) deve
-   estar incluída no ZIP do projeto.
+* **O2** Programa deve estar organizado numa estrutura de classes bem pensada.
+  O código deve estar devidamente comentado e indentado<sup>[1](#fn1)</sup>.
+* **O3** Projeto deve estar adequadamente comentado e documentado. Documentação
+  do projeto deve ser feita comentários de documentação XML, e a documentação
+  (gerada com [Doxygen], [Sandcastle] ou ferramenta similar) deve estar
+  incluída no ZIP do projeto (mas não integrada no repositório Git).
+* **O4** Repositório Git deve refletir um bom uso desta ferramenta, com
+  _commits_ por parte de todos os elementos do grupo, com mensagens de _commit_
+  que sigam as melhores práticas para o efeito (como indicado
+  [aqui](https://chris.beams.io/posts/git-commit/),
+  [aqui](https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53),
+  [aqui](https://github.com/erlang/otp/wiki/writing-good-commit-messages) e
+  [aqui](https://stackoverflow.com/questions/2290016/git-commit-messages-50-72-formatting)).
+* **O5** Documentação do projeto deve ser feita comentários de documentação
+  XML, e a documentação (gerada com [Doxygen], [Sandcastle] ou ferramenta
+  similar) deve estar incluída no ZIP do projeto.
 * **O6** Relatório bem estruturado.
 
 O projeto, que tem um peso de 4 valores na nota final da disciplina, será
@@ -166,7 +190,7 @@ Windows pois regra geral a codificação UTF-8 não é usada por omissão. Em to
 caso, e dependendo do editor usado, a codificação UTF-8 pode ser selecionada na
 janela de "Save as"/"Guardar como", ou então nas preferências do editor.
 
-<sup><a name="fn3">3</a></sup> Texto adapta.dropbox.attrdo da disciplina de [Algoritmos e
+<sup><a name="fn3">3</a></sup> Texto adaptado da disciplina de [Algoritmos e
 Estruturas de Dados][aed] do [Instituto Superior Técnico][ist].
 
 ## Referências
@@ -202,3 +226,4 @@ Este enunciado é disponibilizados através da licença [CC BY-NC-SA 4.0].
 [regras do Simplexity]:https://john.cs.olemiss.edu/~dwilkins/CSCI531/fall12/Simplexity_rules.pdf
 [Simplexity]:https://boardgamegeek.com/boardgame/55810/simplexity
 [KISS]:https://en.wikipedia.org/wiki/KISS_principle
+[4-em-linha]:https://en.wikipedia.org/wiki/Connect_Four
