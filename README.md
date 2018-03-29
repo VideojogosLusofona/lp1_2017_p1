@@ -12,8 +12,8 @@ work. If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/>.
 
 ## Descrição do problema
 
-Os alunos devem implementar em C#, em grupos de 2 ou 3 elementos, o jogo
-[Simplexity] para dois jogadores.
+Os alunos devem implementar o jogo [Simplexity] para dois jogadores.
+Deve ser usada a linguagem C# e os grupos podem ter entre 2 a 3 elementos.
 
 ### O jogo Simplexity
 
@@ -29,8 +29,8 @@ num empate após todas as peças terem sido colocadas em jogo sem que exista uma
 situação de vitória.
 
 A [Tabela 1](#tab1) mostra as condições de vitória para cada jogador, bem como
-as peças alocadas inicialmente a cada um. Em caso de dúvida pode consultas as
-[regras do Simplexity] ou contactar o docente.
+as peças alocadas inicialmente a cada um. Em caso de dúvidas podes consultar as
+[regras do Simplexity] ou entrar em contacto com o docente via Moodle.
 
 <a name="tab1"></a>
 
@@ -53,15 +53,15 @@ O jogo começa automaticamente, entrando no seguinte ciclo (_game loop_):
    * Em caso negativo:
       * Se ainda existirem peças para jogar, voltar ao ponto 1, alternando o
         jogador
-      * Caso contrário, terminar jogo em empate.
+      * Caso contrário, terminar jogo com empate
 
 No ponto 2, é solicitado ao jogador: a) a peça a jogar (cubo ou cilindro); e,
-b) a coluna onde colocar a peça. Antes de solicitar a jogada, deve ser dada a
+b) a coluna onde colocar a peça. Antes de solicitar a jogada, deve ser dada
 indicação de quantas peças de cada tipo o jogador ainda tem para jogar. Após o
 jogador ter inserido uma jogada, o jogo deve verificar se: a) o jogador ainda
 tem peças do tipo indicado; e, b) a coluna do tabuleiro ainda tem espaço para
-mais peças (máximo 7 peças por coluna). Se alguma destas verificações falhar, o
-jogador deve repetir a jogada.
+mais peças (máximo de 7 peças por coluna). Se alguma destas verificações
+falhar, o jogo deve solicitar ao jogador a repetição da jogada.
 
 No ponto 3, o tabuleiro deve ser analisado de modo a determinar se existe uma
 das condições de vitória descritas na secção anterior.
@@ -112,12 +112,12 @@ Este projeto tem os seguintes objetivos:
   variáveis ou métodos nunca usados; d) soluções [simples][KISS] e eficientes;
   e, e) projeto compila e executa sem erros e/ou  _warnings_.
 * **O3** - Projeto adequadamente comentado e documentado. Documentação deve ser
-  feita comentários de documentação XML, e a documentação (gerada com
+  feita com comentários de documentação XML, e a documentação (gerada com
   [Doxygen], [Sandcastle] ou ferramenta similar) deve estar incluída no ZIP do
   projeto (mas não integrada no repositório Git).
 * **O4** - Repositório Git deve refletir boa utilização do mesmo, com _commits_
-  de todos os elementos do grupo, com mensagens de _commit_ que sigam as
-  melhores práticas para o efeito (como indicado
+  de todos os elementos do grupo e mensagens de _commit_ que sigam as melhores
+  práticas para o efeito (como indicado
   [aqui](https://chris.beams.io/posts/git-commit/),
   [aqui](https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53),
   [aqui](https://github.com/erlang/otp/wiki/writing-good-commit-messages) e
@@ -126,13 +126,15 @@ Este projeto tem os seguintes objetivos:
   da seguinte forma:
   * Título do projeto.
   * Nome dos autores (primeiro e último) e respetivos números de aluno.
+  * Indicação do repositório público Git utilizado. Esta indicação é opcional,
+    pois podem preferir desenvolver o projeto num repositório privado.
   * Informação de quem fez o quê no projeto. Esta informação é **obrigatória**
     e deve refletir os _commits_ feitos no Git.
   * Descrição da solução:
     * Arquitetura da solução, com breve explicação de como o programa foi
-      organizado, estruturas de dados (para o tabuleiro de jogo, por exemplo) e
-      algoritmos (para verificação da situação de vitória, por exemplo)
-      utilizados.
+      organizado e indicação das estruturas de dados (para o tabuleiro de jogo,
+      por exemplo) e algoritmos (para verificação da situação de vitória, por
+      exemplo) utilizados.
     * Um diagrama UML descrevendo a estrutura de classes.
     * Um fluxograma mostrando o _game loop_.
   * Conclusões e matéria aprendida.
@@ -144,11 +146,11 @@ Este projeto tem os seguintes objetivos:
     suficiente para que seja possível ter uma boa ideia do que foi feito.
     Atenção aos erros ortográficos, pois serão tidos em conta na nota final.
 
-O projeto, que tem um peso de 4 valores na nota final da disciplina, será
-avaliado de uma forma qualitativa. Isto significa que todos os objetivos têm de
-ser parcialmente ou totalmente cumpridos. A cada objetivo, O1 a O6, será
-atribuída uma nota entre 0 e 1. A nota preliminar do projeto será dada pela
-seguinte fórmula:
+O projeto tem um peso de 4 valores na nota final da disciplina e será avaliado
+de forma qualitativa. Isto significa que todos os objetivos têm de ser
+parcialmente ou totalmente cumpridos. A cada objetivo, O1 a O6, será atribuída
+uma nota entre 0 e 1. A nota preliminar do projeto será dada pela seguinte
+fórmula:
 
 _N = 4 x O1 x O2 x O3 x O4 x O5_
 
@@ -157,7 +159,10 @@ nota final será zero.
 
 A nota individual de cada aluno será atribuida com base na nota preliminar do
 projeto, na percentagem de trabalho realizada (indicada no relatório e
-verificada através dos _commits_) e na discussão do projeto.
+verificada através dos _commits_) e na discussão do projeto. Se o aluno tiver
+realizado uma percentagem equitativa do projeto e se souber explicar o que fez
+durante a discussão, então a nota individual deverá ser muito semelhante à nota
+preliminar.
 
 ## Entrega
 
@@ -165,27 +170,35 @@ O projeto deve ser entregue via Moodle até às 23h de 22 de abril de 2018.
 Deve ser submetido um ficheiro `zip` com os seguintes conteúdos:
 
 * Solução completa do projeto, contendo adicionalmente e obrigatoriamente:
-  * Pasta escondida `.git` contendo o repositório Git local do projeto.
+  * Pasta escondida `.git` com o repositório Git local do projeto.
   * Documentação gerada com [Doxygen], [Sandcastle] ou ferramenta similar.
   * Ficheiro `README.md` contendo o relatório do projeto em formato [Markdown].
   * Ficheiros de imagem contendo o fluxograma e o diagrama UML de classes.
 
 Notas adicionais para entrega:
 
-* A solução deve ter sido criada no Visual Studio 2017, Visual Studio Code,
+* A solução deve ser desenvolvida no Visual Studio 2017, Visual Studio Code,
   Visual Studio Mac ou MonoDevelop.
 * O projeto deve ser do tipo Console App (preferencialmente .NET Framework).
 * Todos os ficheiros do projeto devem ser gravados em codificação UTF-8. Este
   pormenor é especialmente importante em Windows pois regra geral a codificação
   UTF-8 não é usada por omissão. Em todo o caso, e dependendo do editor usado,
-  a codificação UTF-8 pode ser selecionada na janela de "Save as"/"Guardar
-  como", ou então nas preferências do editor.
+  a codificação UTF-8 pode ser selecionada na janela de "Save as" / "Guardar
+  como", ou então nas preferências do editor utilizado.
 
 ## Extensões opcionais
 
-<a name="extensoesop"></a>
+Os alunos podem opcionalmente desenvolver um modo _single-player_, onde o
+jogador adversário é implementado com inteligência artificial. Para o efeito
+podem usar o algoritmo [Minimax], com cortes [Alfa-Beta] para acelerar o
+cálculo, além de ser uma excelente oportunidade para o uso de recursão.
 
-* Inteligência artificial
+Esta extensão permite melhorar, até ao máximo de 4 valores, a nota preliminar
+do projeto. Atenção que esta extensão não é simples e os conceitos envolvidos
+não fazem parte da matéria da disciplina. Só devem abordar este problema quando
+o projeto base estiver devidamente concluído. Se abordarem o problema devem
+fazê-lo num ramo Git separado, para poderem facilmente voltar à versão base
+caso não tenham sucesso na implementação da extensão.
 
 ## Honestidade académica
 
@@ -212,7 +225,7 @@ consequência imediata a anulação dos projetos de todos os alunos envolvidos
 desonestidade académica será relatada aos órgãos superiores da escola
 para possível instauração de um processo disciplinar. Este poderá
 resultar em reprovação à disciplina, reprovaç.dropbox.attrão de ano ou mesmo
-suspensão temporária ou definitiva da ULHT<sup>[3](#fn3)</sup>.
+suspensão temporária ou definitiva da ULHT.
 
 _Texto adaptado da disciplina de [Algoritmos e
 Estruturas de Dados][aed] do [Instituto Superior Técnico][ist]_
@@ -251,3 +264,5 @@ Este enunciado é disponibilizados através da licença [CC BY-NC-SA 4.0].
 [Simplexity]:https://boardgamegeek.com/boardgame/55810/simplexity
 [KISS]:https://en.wikipedia.org/wiki/KISS_principle
 [4-em-linha]:https://en.wikipedia.org/wiki/Connect_Four
+[Minimax]:https://en.wikipedia.org/wiki/Minimax
+[Alfa-Beta]:https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning
