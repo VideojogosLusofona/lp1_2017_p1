@@ -12,7 +12,8 @@ work. If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/>.
 
 ## Descrição do problema
 
-Os alunos devem implementar o jogo [Simplexity] para dois jogadores em C#.
+Os alunos devem implementar em C#, em grupos de 2 ou 3 elementos, o jogo
+[Simplexity] para dois jogadores.
 
 ### O jogo Simplexity
 
@@ -70,7 +71,7 @@ das condições de vitória descritas na secção anterior.
 ### Visualização do jogo
 
 A visualização do jogo deve feita em modo de texto. A [Figura 1](#fig1) mostra
-uma possível implementação da visualização do jogo (lado direito), com os
+uma possível implementação da visualização do jogo (lado esquerdo), com os
 caracteres `R` e `r` indicando peças vermelhas cúbicas e cilíndricas,
 respetivamente, e os caracteres `W` e `w` representando peças brancas cúbicas
 e cilíndricas, respetivamente.
@@ -81,6 +82,8 @@ e cilíndricas, respetivamente.
 
 **Figura 1** - Possível implementação da visualização em modo de texto (lado
 esquerdo) e situação de jogo equivalente (lado direito).
+
+<a name="orgclasses"></a>
 
 ### Organização do projeto e estrutura de classes
 
@@ -101,69 +104,82 @@ adequada para este projeto.
 
 Este projeto tem os seguintes objetivos:
 
-* **O1** Jogo deve funcionar como especificado.
-* **O2** Programa deve estar organizado numa estrutura de classes bem pensada.
-  O código deve estar devidamente comentado e indentado<sup>[1](#fn1)</sup>.
-* **O3** Projeto deve estar adequadamente comentado e documentado. Documentação
-  do projeto deve ser feita comentários de documentação XML, e a documentação
-  (gerada com [Doxygen], [Sandcastle] ou ferramenta similar) deve estar
-  incluída no ZIP do projeto (mas não integrada no repositório Git).
-* **O4** Repositório Git deve refletir um bom uso desta ferramenta, com
-  _commits_ por parte de todos os elementos do grupo, com mensagens de _commit_
-  que sigam as melhores práticas para o efeito (como indicado
+* **O1** - Jogo deve funcionar como especificado.
+* **O2** - Projeto e código bem organizados, nomeadamente: a) estrutura de
+  classes bem pensada (ver secção <a href="#orgclasses">Organização do projeto
+  e estrutura de classes</a>); b) código devidamente comentado e indentado; c)
+  inexistência de código "morto", que não faz nada, como por exemplo
+  variáveis ou métodos nunca usados; d) soluções [simples][KISS] e eficientes;
+  e, e) projeto compila e executa sem erros e/ou  _warnings_.
+* **O3** - Projeto adequadamente comentado e documentado. Documentação deve ser
+  feita comentários de documentação XML, e a documentação (gerada com
+  [Doxygen], [Sandcastle] ou ferramenta similar) deve estar incluída no ZIP do
+  projeto (mas não integrada no repositório Git).
+* **O4** - Repositório Git deve refletir boa utilização do mesmo, com _commits_
+  de todos os elementos do grupo, com mensagens de _commit_ que sigam as
+  melhores práticas para o efeito (como indicado
   [aqui](https://chris.beams.io/posts/git-commit/),
   [aqui](https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53),
   [aqui](https://github.com/erlang/otp/wiki/writing-good-commit-messages) e
   [aqui](https://stackoverflow.com/questions/2290016/git-commit-messages-50-72-formatting)).
-* **O5** Documentação do projeto deve ser feita comentários de documentação
-  XML, e a documentação (gerada com [Doxygen], [Sandcastle] ou ferramenta
-  similar) deve estar incluída no ZIP do projeto.
-* **O6** Relatório bem estruturado.
+* **O5** - Relatório em formato [Markdown] (ficheiro `README.md`), organizado
+  da seguinte forma:
+  * Título do projeto.
+  * Nome dos autores (primeiro e último) e respetivos números de aluno.
+  * Informação de quem fez o quê no projeto. Esta informação é **obrigatória**
+    e deve refletir os _commits_ feitos no Git.
+  * Descrição da solução:
+    * Arquitetura da solução, com breve explicação de como o programa foi
+      organizado, estruturas de dados (para o tabuleiro de jogo, por exemplo) e
+      algoritmos (para verificação da situação de vitória, por exemplo)
+      utilizados.
+    * Um diagrama UML descrevendo a estrutura de classes.
+    * Um fluxograma mostrando o _game loop_.
+  * Conclusões e matéria aprendida.
+  * Referências:
+    * Incluindo trocas de ideias com colegas, código aberto reutilizado e
+      bibliotecas de terceiros utilizadas. Devem ser o mais detalhados
+      possível.
+  * **Nota:** o relatório deve ser simples e breve, com informação mínima e
+    suficiente para que seja possível ter uma boa ideia do que foi feito.
+    Atenção aos erros ortográficos, pois serão tidos em conta na nota final.
 
 O projeto, que tem um peso de 4 valores na nota final da disciplina, será
 avaliado de uma forma qualitativa. Isto significa que todos os objetivos têm de
-ser totalmente (ou pelo menos parcialmente) cumpridos. A cada objetivo, O1 a
-O6, será atribuída uma nota entre 0 e 1. A nota final do projeto será dada pela
+ser parcialmente ou totalmente cumpridos. A cada objetivo, O1 a O6, será
+atribuída uma nota entre 0 e 1. A nota preliminar do projeto será dada pela
 seguinte fórmula:
 
-_N = 4 x O1 x O2 x O3 x O4 x O5 x O6_
+_N = 4 x O1 x O2 x O3 x O4 x O5_
 
 Isto significa que se os alunos ignorarem completamente um dos objetivos, a
 nota final será zero.
+
+A nota individual de cada aluno será atribuida com base na nota preliminar do
+projeto, na percentagem de trabalho realizada (indicada no relatório e
+verificada através dos _commits_) e na discussão do projeto.
 
 ## Entrega
 
 O projeto deve ser entregue via Moodle até às 23h de 22 de abril de 2018.
 Deve ser submetido um ficheiro `zip` com os seguintes conteúdos:
 
-* Solução completa (Visual Studio 2017, Visual Studio Code ou Visual Studio
-  Mac), contendo adicionalmente e obrigatoriamente:
+* Solução completa do projeto, contendo adicionalmente e obrigatoriamente:
   * Pasta escondida `.git` contendo o repositório Git local do projeto.
   * Documentação gerada com [Doxygen], [Sandcastle] ou ferramenta similar.
-  * Ficheiro `README.md` contendo o relatório do projeto em formato [Markdown]
-    organizado da seguinte forma:
-    * Título do projeto.
-    * Nome dos autores (primeiro e último) e respetivos números de aluno.
-    * Descrição da solução:
-      * Arquitetura da solução, com breve explicação de como o programa foi
-        estruturado.
-      * Um diagrama UML explicando a estrutura de classes.
-      * Um fluxograma explicando o _game loop_.
-      * Estruturas de dados: grelha de jogo, outras estruturas auxiliares
-        relevantes.
-      * Algoritmos: verificação de situação vencedora.
-    * Conclusões e matéria aprendida.
-    * Indicação de quem fez o quê no projeto
-    * Deve estar em conformidade com os _commits_ no git
-    * Referências:
-      * Incluindo trocas de ideias com colegas, código aberto reutilizado e
-        bibliotecas de terceiros utilizadas. Devem ser o mais detalhados
-        possível.
-    * **Nota:** o relatório deve ser simples e breve, com informação mínima e
-      suficiente para que seja possível ter uma boa ideia do que foi feito.
+  * Ficheiro `README.md` contendo o relatório do projeto em formato [Markdown].
+  * Ficheiros de imagem contendo o fluxograma e o diagrama UML de classes.
 
-**Atenção**: Todos os ficheiros do projeto devem ser gravados em codificação
-UTF-8<sup>[2](#fn2)</sup>.
+Notas adicionais para entrega:
+
+* A solução deve ter sido criada no Visual Studio 2017, Visual Studio Code,
+  Visual Studio Mac ou MonoDevelop.
+* O projeto deve ser do tipo Console App (preferencialmente .NET Framework).
+* Todos os ficheiros do projeto devem ser gravados em codificação UTF-8. Este
+  pormenor é especialmente importante em Windows pois regra geral a codificação
+  UTF-8 não é usada por omissão. Em todo o caso, e dependendo do editor usado,
+  a codificação UTF-8 pode ser selecionada na janela de "Save as"/"Guardar
+  como", ou então nas preferências do editor.
 
 ## Extensões opcionais
 
@@ -198,24 +214,8 @@ para possível instauração de um processo disciplinar. Este poderá
 resultar em reprovação à disciplina, reprovaç.dropbox.attrão de ano ou mesmo
 suspensão temporária ou definitiva da ULHT<sup>[3](#fn3)</sup>.
 
-## Notas
-
-<sup><a name="fn1">1</a></sup> Este item inclui vários aspetos: 1) projeto
-devidamente organizado, com uma estrutura de classes lógica na qual [cada
-classe tem uma responsabilidade específica e bem definida][SRP]; 2) código bem
-indentado; 3) não é incluído código "morto", que não faz nada, como por exemplo
-variáveis ou métodos nunca usados; 4) as soluções desenvolvidas são
-[simples][KISS] e/ou eficientes; 5) código compila e executa sem erros e/ou
-_warnings_; 6) código não acede a zonas inválidas da memória, como por exemplo
-índices fora dos limites de um _array_.
-
-<sup><a name="fn2">2</a></sup> Este pormenor é especialmente importante em
-Windows pois regra geral a codificação UTF-8 não é usada por omissão. Em todo o
-caso, e dependendo do editor usado, a codificação UTF-8 pode ser selecionada na
-janela de "Save as"/"Guardar como", ou então nas preferências do editor.
-
-<sup><a name="fn3">3</a></sup> Texto adaptado da disciplina de [Algoritmos e
-Estruturas de Dados][aed] do [Instituto Superior Técnico][ist].
+_Texto adaptado da disciplina de [Algoritmos e
+Estruturas de Dados][aed] do [Instituto Superior Técnico][ist]_
 
 ## Referências
 
