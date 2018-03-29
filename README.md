@@ -148,7 +148,7 @@ Este projeto tem os seguintes objetivos:
 
 O projeto tem um peso de 4 valores na nota final da disciplina e será avaliado
 de forma qualitativa. Isto significa que todos os objetivos têm de ser
-parcialmente ou totalmente cumpridos. A cada objetivo, O1 a O6, será atribuída
+parcialmente ou totalmente cumpridos. A cada objetivo, O1 a O5, será atribuída
 uma nota entre 0 e 1. A nota preliminar do projeto será dada pela seguinte
 fórmula:
 
@@ -224,8 +224,8 @@ consequência imediata a anulação dos projetos de todos os alunos envolvidos
 (incluindo os que possibilitaram a ocorrência). Qualquer suspeita de
 desonestidade académica será relatada aos órgãos superiores da escola
 para possível instauração de um processo disciplinar. Este poderá
-resultar em reprovação à disciplina, reprovaç.dropbox.attrão de ano ou mesmo
-suspensão temporária ou definitiva da ULHT.
+resultar em reprovação à disciplina, reprovação de ano ou mesmo suspensão
+temporária ou definitiva da ULHT.
 
 _Texto adaptado da disciplina de [Algoritmos e
 Estruturas de Dados][aed] do [Instituto Superior Técnico][ist]_
