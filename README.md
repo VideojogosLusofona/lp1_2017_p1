@@ -89,10 +89,10 @@ esquerdo) e situação de jogo equivalente (lado direito).
 
 O projeto deve estar devidamente organizado, fazendo uso de classes e
 enumerações. Cada classe/enumeração deve ser colocada num ficheiro com o mesmo
-nome. Por exemplo, uma classe chamada classe `Player` deve ser colocada no
-ficheiro `Player.cs`. A estrutura de classes deve ser bem pensada e organizada
-de uma forma lógica, e [cada classe deve ter uma responsabilidade específica e
-bem definida][SRP].
+nome. Por exemplo, uma classe chamada `Player` deve ser colocada no ficheiro
+`Player.cs`. A estrutura de classes deve ser bem pensada e organizada de uma
+forma lógica, e [cada classe deve ter uma responsabilidade específica e bem
+definida][SRP].
 
 O exercício proposto no capítulo 20 do livro da disciplina [\[1\]](#ref1)
 constitui um bom ponto de partida para desenhar uma estrutura de classes
